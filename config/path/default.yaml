@@ -1,0 +1,18 @@
+# @package _group_
+
+# Parent log directory
+logdir: "../logs"
+
+# AudioCaps root
+audiocaps: "../data"
+# Clotho root
+clotho: "../data"
+
+# For download and extract AudioCaps audios
+youtube_dl: "youtube-dl"
+ffmpeg: "ffmpeg"
+# For SPICE metric
+java: "java"
+
+# Parent directory for pre-trained models
+pretrained: "../data/pretrained/"

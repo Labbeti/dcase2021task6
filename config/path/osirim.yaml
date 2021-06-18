@@ -1,0 +1,12 @@
+# @package _group_
+
+logdir: "../logs"
+
+audiocaps: "/projets/samova/elabbe/corpus/"
+clotho: "/projets/samova/elabbe/corpus/"
+
+youtube_dl: "/users/samova/elabbe/bin/youtube-dl"
+ffmpeg: "/projets/samova/CORPORA/AUDIOSET/audiosetdl-master/bin/ffmpeg/ffmpeg"
+java: "/logiciels/java1.13/bin/java"
+
+pretrained: "/projets/samova/elabbe/pretrained/"

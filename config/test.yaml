@@ -1,0 +1,30 @@
+# @package _global_
+
+defaults:
+  - audio: meldb
+  - data: clotho
+  - expt: lat
+  - path: default
+  - hydra/job_logging: custom  # redirect log file to output_subdir
+
+datetime: "${now:%Y-%m-%d_%H:%M:%S}"
+tag: "DBG"
+seed: 1234
+verbose: true
+debug: false
+save: true
+
+accelerator: null
+cpus: 4
+gpus: 1
+resume: null
+
+log:
+  save_dir: "${path.logdir}/${data.name}"
+  name: "test_${expt.name}"
+  version: "${datetime}_${tag}"
+
+hydra:
+  output_subdir: "${log.save_dir}/${log.name}/${log.version}/hydra"
+  run:
+    dir: "./"

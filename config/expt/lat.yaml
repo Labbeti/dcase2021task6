@@ -1,0 +1,16 @@
+# @package _group_
+
+name: "ListenAttendTell"
+
+optim_name: "Adam"
+lr: 0.0005
+weight_decay: 1e-6
+verbose: ${verbose}
+
+use_spec_augment: false
+use_cutoutspec: false
+input_dim: 64
+
+beam_size: 10
+use_mixup: false
+beam_alpha: 0.0

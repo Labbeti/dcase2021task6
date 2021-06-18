@@ -1,0 +1,12 @@
+# @package _group_
+
+logdir: "../logs"
+
+audiocaps: "/tmpdir/labbe/corpus/"
+clotho: "/tmpdir/labbe/corpus/"
+
+youtube_dl: null
+ffmpeg: null
+java: "java"
+
+pretrained: "/projets/labbe/pretrained/"

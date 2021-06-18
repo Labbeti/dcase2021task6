@@ -1,0 +1,9 @@
+# @package _group_
+
+name: "CplxMelSpecDB"
+sample_rate: ${data.resample_rate}
+n_fft: 1024
+n_mels: 64
+hop_length: 512
+power: 1.0
+normalized: true

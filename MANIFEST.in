@@ -1,0 +1,3 @@
+
+include install_spice.sh
+include post_setup.sh

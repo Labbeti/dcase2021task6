@@ -1,0 +1,25 @@
+
+# Directories
+.idea/
+__pycache__/
+/data/
+logs/
+cache/
+lib/
+tmp/
+SPICE-1.0/
+*.egg-info/
+.vscode/
+.ipynb_checkpoints/
+lightning_logs/
+
+# Files
+SPICE-1.0.zip
+spice-1.0.jar
+
+# Files patterns
+*ign*
+.tmp*
+*.flac
+*.wav
+*.pickle

@@ -1,0 +1,15 @@
+# @package _group_
+
+# Same parameters than the dcase 2021 baseline :
+#  https://github.com/audio-captioning/dcase-2021-baseline/blob/master/settings/feature_extraction.yaml
+name: "MelSpecDB"
+
+sample_rate: ${data.resample_rate}
+n_fft: 1024
+hop_length: 512
+n_mels: 64
+center: true
+f_min: 0.0
+f_max: null
+power: 1.0
+normalized: true

@@ -1,0 +1,5 @@
+# @package _group_
+
+name: "Wavegram"
+fpath: ${path.wavegram}
+trainable: false

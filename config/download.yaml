@@ -1,0 +1,26 @@
+# @package _global_
+
+defaults:
+  - data: clotho
+  - path: default
+  - hydra/job_logging: custom  # redirect log file to output_subdir
+
+datetime: "${now:%Y-%m-%d_%H:%M:%S}"
+tag: ""
+gpus: 0
+
+# Models to download
+nltk: true
+spacy: true
+language_tool: false
+pann: true
+
+log:
+  save_dir: "${path.logdir}/${data.name}"
+  name: "download"
+  version: "${datetime}_${tag}"
+
+hydra:
+  output_subdir: "${log.save_dir}/${log.name}/${log.version}/hydra"
+  run:
+    dir: "./"

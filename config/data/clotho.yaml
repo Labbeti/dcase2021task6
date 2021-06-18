@@ -1,0 +1,11 @@
+# @package _group_
+
+name: "Clotho"
+
+root: "${path.clotho}"
+download: false
+version: 'v2.1'
+bsize: 8
+n_workers: ${cpus}
+train_captions_select: "random"
+resample_rate: 32000

@@ -1,0 +1,38 @@
+# @package _global_
+
+defaults:
+  - audio: meldb
+  - data: clotho
+  - expt: lat
+  - path: default
+  - hydra/job_logging: custom  # redirect log file to output_subdir
+
+datetime: "${now:%Y-%m-%d_%H:%M:%S}"
+tag: "DBG"
+seed: 1234
+verbose: true
+debug: false
+test: true
+save: true
+
+accelerator: null
+cpus: 4
+gpus: 1
+resume: null
+epochs: 50
+
+ckpt:
+  monitor: "val/loss"
+  mode: "min"
+
+log:
+  save_dir: "${path.logdir}/${data.name}"
+  name: "train_${expt.name}"
+  version: "${datetime}_${tag}"
+
+hydra:
+  # Set args save in board dir
+  output_subdir: "${log.save_dir}/${log.name}/${log.version}/hydra"
+  # Set hydra working dir
+  run:
+    dir: "./"
