@@ -45,7 +45,7 @@ setup(
 	name='aac',
 	version=read_version(),
 	packages=find_packages(),
-	url='https://github.com/Labbeti/AAC',
+	url='https://github.com/Labbeti/dcase2021task6',
 	license='',
 	author='Etienne Labbé',
 	author_email='etienne.labbe31@gmail.com',
