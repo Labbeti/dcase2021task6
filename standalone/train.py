@@ -116,10 +116,17 @@ def main_train(cfg: DictConfig):
 		if hasattr(datamodule, 'vocabulary'):
 			vocab_fpath = osp.join(logger.log_dir, 'vocabulary.json')
 			save_vocabulary(datamodule.vocabulary, vocab_fpath)
-	
+
+		total_params = count_params(exptmodule, only_trainable=False)
+		trainable_params = count_params(exptmodule, only_trainable=True)
+		
+		if cfg.verbose:
+			logging.info(f'Total params : {total_params}')
+			logging.info(f'Trainable params : {trainable_params}')
+
 		logger.log_hyperparams(params={
-			'expt_n_params': count_params(exptmodule, only_trainable=False),
-			'expt_n_params_trainable': count_params(exptmodule, only_trainable=True),
+			'expt_n_params': total_params,
+			'expt_n_params_trainable': trainable_params,
 		})
 
 		logger.save_and_close()

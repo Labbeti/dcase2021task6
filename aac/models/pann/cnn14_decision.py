@@ -26,7 +26,7 @@ class Cnn14_DecisionLevelAtt(nn.Module):
 		use_cutout: bool = False,
 		use_mixup: bool = False,
 		use_spec_augment: bool = False,
-		return_clipwise_output: bool = False,
+		return_clipwise_output: bool = True,
 	) -> None:
 		super().__init__()
 		self.use_cutout = use_cutout
